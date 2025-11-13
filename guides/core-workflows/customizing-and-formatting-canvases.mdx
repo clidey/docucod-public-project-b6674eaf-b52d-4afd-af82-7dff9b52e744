@@ -1,0 +1,55 @@
+---
+title: "Customizing and Formatting Canvases"
+description: "Explore options for formatting node content, applying visual styles, and structuring information in your canvas for clarity and impact."
+---
+
+## Shaping Your Canvas: Customizing and Formatting for Clarity and Impact
+
+Crafting an effective JSON Canvas is not only about placing nodes and drawing edges—it’s about presenting information visually with clarity and style that elevates understanding. This page empowers you to enhance your canvas by formatting node content, applying color and style, and structuring groups. Through thoughtful customization, you transform raw data and files into a coherent, navigable canvas that communicates your narrative powerfully and intuitively.
+
+By mastering these customization techniques, you gain control over how your canvas looks and feels. You’ll learn how to apply colors meaningfully, embed and format text nodes with Markdown, style background images for groups, and optimize the use of node layouts. This page assumes you are familiar with creating basic canvases and focuses exclusively on the visual and structural formatting to elevate your canvas presentations.
+
+
+## Working with Node Content: Text, Files, and Links
+
+Nodes are the foundational elements of your canvas, and each type serves a distinct purpose. Text nodes let you add rich, formatted content with Markdown syntax alongside position and size attributes, giving flexibility to explain, annotate, or narrate on the canvas itself. File nodes act as visual placeholders for external resources like images or documents, anchoring vital assets spatially. Link nodes provide direct connection points for URLs, enriching your layout with external references.
+
+To maximize clarity, use text nodes strategically for explanations or lists. Because Markdown formatting is supported, you can emphasize key points, create enumerations, or link to other pages, supporting detail without clutter. File nodes should be sized proportionally and colored when needed to distinguish their role. Meanwhile, link nodes bring external content into your canvas’s spatial story, enabling users to navigate outward seamlessly.
+
+Implementing these content types thoughtfully turns your canvas into a dynamic visual document—each node communicates distinct information yet integrates harmoniously within your broader layout. This foundational content formatting ensures users encounter not just data but a meaningful, accessible narrative.
+
+
+## Applying Color and Visual Styles to Enhance Readability
+
+Color is a subtle yet powerful tool for guiding attention and reinforcing meaning. JSON Canvas supports customizable colors on nodes and edges using a palette of six preset colors referenced by numeric strings, or hex color codes for fine control. When used consistently, these colors help users quickly categorize content, highlight important nodes, or visually group related areas.
+
+For example, use red (preset "1") for urgent or critical content nodes, green ("4") for completed or confirmed items, and purple ("6") to mark custom or theme-specific nodes. Edges also support color assignment to signify the type or status of relationships, improving visual differentiation when your layout becomes complex.
+
+Beyond color, group nodes allow background images to visually anchor or brand collections of nodes. By selecting background styles such as `cover`, `ratio`, or `repeat`, you can control how the image fits within the group’s boundaries—cover fills the container, ratio maintains the image's aspect ratio, and repeat tiles the image across the background. This capability allows for thematic zones on your canvas or visual cues to enhance storytelling.
+
+Combining these styling options turns a plain network of nodes into a lively, meaningful map that users can intuitively read and explore.
+
+
+## Structuring Your Canvas: Using Groups and Layout Considerations
+
+Organizing dense content benefits greatly from structural conventions. Group type nodes serve as visual containers that segment your canvas into logical areas. These groups can be labeled, given a background image, and styled to visually separate zones or themes without restricting interactivity.
+
+Think of groups as transparent frames that help users orient themselves when canvases grow in scale or complexity. Labels on groups provide context at a glance, while backgrounds supply visual cues. When designing groups, consider consistent sizing and positioning so that contained nodes don’t spill outside, preserving an orderly appearance.
+
+In addition, mindful spacing and layering priorities—controlled via node ordering in JSON arrays—ensure critical content remains prominent. The ability to assign z-index by array position means you can stack elements to avoid obscured content and maintain navigability.
+
+This structural discipline lets your canvas morph from a chaotic scatter of points to a well-composed visual narrative, improving both user engagement and information retention.
+
+
+## Tips to Elevate Your Canvas and Avoid Common Pitfalls
+
+Customization is about balance. Over-coloring or excessive background images can overwhelm users, reducing clarity instead of improving it. Favor restrained color usage with clear meaning and avoid decorative choices that confuse.
+
+Ensure text nodes remain readable: use headings, lists, and links courtesy of Markdown syntax judiciously, and keep text concise. When scaling canvases, remember that too many grouped nodes in a small area can be difficult to navigate or select.
+
+Regularly toggle the output panel to inspect the JSON representation of your canvas after formatting changes to ensure data integrity. Consistently update node positions, sizes, and styles as you iterate the design; otherwise, edges might not align, or nodes can obscure one another unexpectedly.
+
+Leveraging these practical design principles accelerates your workflow and results in compelling canvases.
+
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" branch="main" paths={[{"path": "assets/canvas.js", "range": "70-260"}, {"path": "spec/1.0.md", "range": "15-101"}]} />
