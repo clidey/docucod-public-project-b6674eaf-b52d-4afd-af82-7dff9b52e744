@@ -1,0 +1,55 @@
+---
+title: "What is JSON Canvas?"
+description: "Get acquainted with JSON Canvas—its core purpose, the value it brings to users, and the primary use cases it addresses. This page provides a succinct introduction to the product's mission and who should consider using it."
+---
+
+## Discovering JSON Canvas: Your Gateway to Infinite Visual Organization
+
+In the rapidly evolving landscape of digital tools for information management, JSON Canvas offers a powerful foundation for capturing spatially organized data. It empowers users to move beyond linear lists or rigid structures by treating information as nodes placed freely on an infinite canvas. Whether you’re mapping ideas, planning projects, or visualizing complex relationships, JSON Canvas enables a fluid and creative flow that adapts to your unique thinking process and evolving needs.
+
+### What JSON Canvas Is and Who Benefits From It
+
+At its core, JSON Canvas is an open file format designed to represent infinite canvas data through a clear, structured JSON syntax. This format captures nodes and their interconnections, supporting diverse content types like text, files, links, and groups. It’s not an application itself but a standardized data language that any infinite canvas tool can adopt or support, making your creative work interoperable across platforms.
+
+This format is ideal for developers building or integrating infinite canvas features into their apps, as well as users seeking a durable and flexible way to save, share, or migrate visual spatial data between apps that support JSON Canvas. By using this open format, creators safeguard their work’s longevity and take ownership of their data without dependency on proprietary tools.
+
+### The Architecture of JSON Canvas at a Glance
+
+JSON Canvas organizes content into two primary arrays at the top level: `nodes` and `edges`. Nodes represent individual elements positioned anywhere on the canvas, endowed with attributes such as position (`x`, `y` coordinates), size, color, and type — which includes text, file references, links, or visual groups. Edges define connections between nodes using unique IDs, specifying start and end points with optional directions and labels, mapping relationships visually.
+
+This design supports layering through z-index ordering (nodes later in the array appear above earlier nodes), giving users precise control over visual hierarchy. Color coding uses predefined numeric presets or hex color strings, allowing adaptable theming across different apps or use cases. The straightforward, extensible JSON schema invites easy parsing, rendering, and manipulation by developers without sacrificing readability or interoperability.<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "spec/1.0.md", "range": "5-84"}]} />
+
+### JSON Canvas in Action: Visualizing and Sharing Your Ideas
+
+Imagine a user crafting a project roadmap. They position text nodes as milestones, connect those with edges representing dependencies, and embed file nodes holding detailed documentation or links to online resources. Group nodes help visually cluster related milestones, while distinct colors code priority levels. This spatial layout not only reveals complex relationships instantly but also scales seamlessly as the project evolves.
+
+In practice, apps supporting JSON Canvas can import and export `.canvas` files, enabling users to switch tools or share canvases effortlessly without losing data fidelity. For instance, Obsidian users can create rich mind maps that export clean JSON Canvas files, which Kinopio or Flowchart Fun can interpret, allowing users to continue their work in alternate environments. By adhering to this shared format, workflows become more integrated and less fragmented.
+
+Here is a snippet illustrating a minimal text node in JSON Canvas:
+
+```json
+{
+  "id": "node-1",
+  "type": "text",
+  "x": 100,
+  "y": 150,
+  "width": 200,
+  "height": 100,
+  "text": "# Project Milestone\nComplete initial prototype",
+  "color": "4"
+}
+```
+
+This snippet defines a text node placed at coordinates (100,150) with a green color, showing markdown-formatted content. Edges would similarly define relationships connecting such nodes.
+
+### Taking the First Steps with JSON Canvas
+
+Getting started means understanding this open specification and exploring compatible apps or tools. Developers can refer to the [Spec](/spec/1.0) page to dive into the full node and edge definitions for building or integrating support. Users looking for applications that embrace JSON Canvas can visit the [Apps](/docs/apps) page listing tools with import/export capabilities.
+
+Once familiar, you can experiment by creating simple canvases, importing existing `.canvas` files, or exporting your work for use in other supported platforms. This approach ensures your visual data remains flexible and portable.
+
+Understanding JSON Canvas opens doors to a more dynamic and user-centric way to organize ideas, projects, and complex information through spatial composition—with freedom, control, and future-proof interoperability.
+
+For detailed usage and examples, explore guides on creating and customizing your first canvas in this documentation suite.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "spec/1.0.md", "range": "5-84"}]} />
