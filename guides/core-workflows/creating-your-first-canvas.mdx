@@ -1,0 +1,48 @@
+---
+title: "Creating Your First Canvas"
+description: "Learn how to create and structure a new canvas within the JSON Canvas application. This guide covers starting from scratch, understanding the layout, and saving your work."
+---
+
+## Creating Your First Canvas
+
+Embarking on your first canvas creation opens the door to spatially organizing ideas, files, and notes in a limitless digital workspace. This page guides you through starting a new canvas project from scratch using the JSON Canvas application, helping you understand how to structure nodes, arrange connections, and securely save your work. The process is approachable for users of all backgrounds and typically takes under 15 minutes for a foundational canvas setup.
+
+### Preparing to Build Your Canvas
+
+Before diving in, ensure your environment is properly set up with the required system and browser capabilities detailed in the [Prerequisites & System Requirements](/getting-started/quick-setup-journey/prerequisites-and-requirements) page. A recent, modern browser with support for SVG, JavaScript ES6+, and the Clipboard API is essential for a fully interactive and smooth canvas experience. Familiarity with basic UI controls like dragging, panning, and zooming will greatly accelerate your workflow. Additionally, having example canvas files loaded as references can provide valuable context during your initial creation stages.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "assets/canvas.js", "range": "10-60"}]} />
+
+### Starting Your Canvas: The Initial Layout
+
+When you begin a new canvas, the workspace presents an infinite, scrollable surface where you can place different types of nodes such as text, files, links, and groups. Each node on the canvas corresponds to an element or content type with defined properties including position (x, y), size (width, height), and optional color coding. Connections between nodes, known as edges, visually display relationships and flow.
+
+Your initial canvas may be empty or contain a starter template showcasing these node types for quick edits. To add nodes, simply use the UI controls to insert the element type of your choice, then position it by dragging. Edges between nodes can be drawn by selecting starting and ending points, which helps you illustrate associations and hierarchy clearly. This spatial arrangement of nodes is core to the value of JSON Canvas, encouraging intuitive insight building and collaboration.
+
+### Saving and Exporting Your Work
+
+As you add and arrange nodes, your canvas exists in a live JSON format that encapsulates the layout, node content, and connections. You can reveal this data in the output panel, which allows you to review the underlying `.canvas` file structure that can be copied, downloaded, or shared.
+
+Exporting your canvas to a `.canvas` file preserves your work in a durable, interoperable format compatible with many supported apps and tools introduced on the [Apps and Tools](/docs/apps) page. Saving regularly ensures your spatial organization and content are secure and easily retrievable or portable.
+
+<Tip>
+Keep the output panel visible to follow how your visual changes affect the raw JSON. It is a powerful way to learn the correspondence between your interactions and the file format.
+</Tip>
+
+### Making Your Canvas Interactive and Navigable
+
+The canvas application offers smooth zooming and panning to help you navigate your expanding workspace. Use keyboard shortcuts, mouse wheel actions, or the zoom controls to adjust your view precisely, focusing on different canvas areas as your node network grows.
+
+Dragging nodes updates connections dynamically, maintaining clarity through automatically redrawn edges. If you ever lose track of your elements, the "Reset" zoom button recalibrates the view to fit all nodes comfortably within your browser window.
+
+<Warning>
+Drag-and-drop might be sensitive to accidental mouse or touch movements. Confirm your node’s new position before saving, and use zoom reset to realign your view if you become disoriented.
+</Warning>
+
+### Putting It All Together
+
+By following this workflow, you transform a blank canvas into an organized, meaningful layout that can capture extensive ideas, related files, and notes in a visual map. Your canvas becomes a living document that grows with your projects and integrates seamlessly with the broader ecosystem of JSON Canvas-compatible tools.
+
+For more advanced customization and formatting options, proceed to the [Customizing and Formatting Canvases](/guides/core-workflows/customizing-and-formatting-canvases) guide. To troubleshoot potential issues during setup or use, consult the [Troubleshooting Setup](/getting-started/troubleshooting/setup-troubleshooting) page.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "assets/canvas.js", "range": "1-200"}]} />
