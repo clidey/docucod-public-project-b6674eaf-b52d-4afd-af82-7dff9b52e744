@@ -1,0 +1,72 @@
+---
+title: "Installation & First Launch"
+description: "Step-by-step installation guide for multiple platforms, followed by launching JSON Canvas for the first time. Provides a single path from download to verification, highlighting the primary files and what to expect on first run."
+---
+
+## Preparing for Installation
+
+To start using JSON Canvas, you need a modern web environment that supports essential browser features like SVG and JavaScript ES6+. This guide assumes you are working on a desktop or laptop with access to a web browser such as Chrome, Firefox, Edge, or Safari. No additional software installation is required beyond downloading the product files, as JSON Canvas runs directly in the browser. For full functionality, ensure your browser supports the Clipboard API for copying canvas data and recent web standards for optimal performance.
+
+## Installing JSON Canvas
+
+Installing JSON Canvas involves downloading the core files to your local machine and launching them in your chosen browser. The package includes HTML files, JavaScript assets, CSS files, and sample `.canvas` data.
+
+<Steps>
+<Step title="Download the JSON Canvas package">
+Obtain the latest JSON Canvas release from the official GitHub repository at [https://github.com/obsidianmd/jsoncanvas](https://github.com/obsidianmd/jsoncanvas). You can either clone the repository or download the ZIP archive and extract it to a convenient directory on your system.
+</Step>
+<Step title="Locate essential files">
+Inside the extracted folder, identify the `canvas.html` file along with the `assets` directory containing JavaScript (`canvas.js`, `prism.js`) and the CSS file (`style.css`). These files collectively render and manage the canvas interface.
+</Step>
+<Step title="Open the main interface">
+Open the `canvas.html` file in your preferred modern browser. This starts JSON Canvas locally with the embedded default canvas data and UI elements.
+</Step>
+<Step title="Verify page load and UI">
+Confirm that the canvas loads displaying several nodes and edges, including the `readme.md` and `spec/1.0.md` nodes, plus navigation links and logos. The infinite canvas area should be visible and interactive.
+</Step>
+<Step title="Explore zoom and pan controls">
+Use the buttons at the bottom right ‘Zoom In’, ‘Zoom Out’, and ‘Reset’ to adjust your view of the canvas. You can also zoom with Ctrl + mouse wheel and pan by holding the spacebar while dragging.
+</Step>
+</Steps>
+
+## Configuring the Environment
+
+JSON Canvas requires no additional configuration to run after downloading. However, you can adjust or extend settings by editing `canvas.js` to modify default zoom limits, zoom speed, or initial pan position. For example, the zoom scale is controlled by the constants:
+
+```javascript
+const minScale = 0.35;
+const maxScale = 1.25;
+const ZOOM_SPEED = 0.1;
+```
+
+Changing these can tailor your navigation experience to different screen sizes or preferences. The canvas nodes and edges are defined dynamically and can be customized by modifying the `edges` and node elements inside the HTML or through interactive drag-and-drop.
+
+For more advanced customizations, refer to the `canvas.js` file, where node dragging, edge drawing, and serialization logic are implemented.<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "assets/canvas.js", "range": "1-350"}]} branch="main" />
+
+## Launching and Validating Your First Canvas
+
+Once the page loads in your browser, you have an interactive infinite canvas at your disposal. Try dragging the nodes labeled `readme.md` or `logo.svg` around the viewing area. Observe how connecting edges update dynamically to maintain relationships.
+
+To confirm everything is working correctly, open the output panel by clicking the 'Toggle output' button in the controls. The panel shows the current canvas JSON data, including all nodes and edges with their positions.
+
+You can copy this JSON data to your clipboard using the 'Copy code' button or download it as a `.canvas` file. This functionality verifies that JSON Canvas is fully operational, enabling you to save and share your canvas states.
+
+<Response>
+
+<Tip>
+If the canvas does not display or controls are unresponsive, ensure you opened the `canvas.html` file directly in the browser and not through a restricted environment that blocks local JavaScript execution.
+</Tip>
+
+<Check>
+Use these steps to validate:
+- Nodes appear and are draggable
+- Edges update as nodes move
+- Zoom and pan controls respond
+- Output panel shows valid JSON reflecting your interactions
+</Check>
+
+## Next Steps
+
+With JSON Canvas running locally, explore creating your own custom canvases by editing or importing `.canvas` files. To deepen your understanding of the format and features, proceed to the guides on [Creating Your First Canvas](/guides/core-workflows/creating-your-first-canvas) and [Basic Configuration & Quick Validation](/getting-started/quick-setup-journey/basic-configuration-quick-validation). For troubleshooting installation or usage issues, consult the [Setup Troubleshooting](/getting-started/troubleshooting/setup-troubleshooting) page.
+
+The installation and first launch provide a foundation to unlock the powerful infinite canvas experience JSON Canvas offers—giving you spatial organization, seamless interactivity, and robust serialization for your data visualization projects.
