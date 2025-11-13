@@ -1,0 +1,64 @@
+---
+title: "Integrating and Sharing Your Canvases"
+description: "Best practices for collaborating, exporting, or embedding your canvases—ensuring seamless teamwork and broader adoption."
+---
+
+## Collaborating Through Canvas Files
+
+Sharing your JSON Canvas files empowers teams and communities to interact with rich, spatially organized content effortlessly. Whether you want to collaborate on brainstorming, map ideas visually, or document complex workflows, integrating and sharing your canvases ensures your work is accessible, adaptable, and reusable across diverse environments.
+
+This guide focuses specifically on the methods and best practices for exporting, embedding, and collaborating with your canvases, equipping you to extend the reach and impact of your infinite canvas projects.
+
+## Preparing Your Canvas for Sharing
+
+Before sharing your canvas, it's important to finalize and export the current state of your work. The JSON Canvas format captures all nodes and edges, preserving their spatial arrangement, content, and connections exactly as you see them on screen.
+
+Use the interface controls to toggle the output panel, where your canvas data is serialized as a JSON string conforming to the JSON Canvas specification. From this panel, you can either copy the JSON text directly or download it as a `.canvas` file for easy distribution.
+
+When exporting, ensure that your canvas represents the complete context you wish to share. This includes all nodes with their content, edge connections, and any color or grouping customizations applied. The serialized format mirrors the underlying data model described in the JSON Canvas Spec, capturing node properties such as IDs, types, positions, and associated files or links, as well as defined edges linking nodes visually <Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "assets/canvas.js", "range": "15-140"}]} />.
+
+## Sharing Methods and Integration Options
+
+Your exported `.canvas` files are highly portable and compatible with any platform or application that supports JSON Canvas, including popular apps like Obsidian and Kinopio. Here are practical ways to share and integrate your canvas data:
+
+- **File Sharing:** Share `.canvas` files via email, cloud storage, or version control to allow collaborators to import and explore the canvas in their supported tools.
+
+- **Embedding in Webpages:** Since canvases are rendered with standard web technologies (SVG and HTML), you can embed your canvas within web pages by including the JSON data and related scripts. This enables interactive display directly on websites, making your visualizations accessible without specialized software.
+
+- **Version Control Collaboration:** Track your canvas files within Git or other repositories for collaborative development, enabling teams to merge changes, comment on structures, and maintain historical states.
+
+- **Third-Party Tool Integration:** Numerous conversion tools and libraries allow you to import JSON Canvas data into other diagramming or graph visualization platforms, facilitating broader usage and cross-tool workflows.
+
+## Best Practices for Seamless Teamwork
+
+To maximize collaborative potential, consider these recommended practices:
+
+- Maintain clear and consistent node IDs to avoid conflicts when merging changes.
+
+- Use descriptive labels and organized groups to make canvases intuitive to new collaborators.
+
+- Regularly update and export canvas data to ensure shared versions reflect the latest progress.
+
+- Leverage the color attributes thoughtfully to convey semantic meaning or priority visually.
+
+- When embedding canvases on websites, optimize the viewport and scaling settings to fit your audience's typical screen sizes, ensuring immediate readability.
+
+## Verifying Your Shared Canvas
+
+After exporting or embedding your canvas, validate that the shared data accurately reflects your intended state. Open the `.canvas` file in a supported JSON Canvas viewer or app to confirm node positions, content, and edge connections appear as expected.
+
+If embedding in a web page, test interactions such as zoom, pan, and node dragging to ensure responsiveness and completeness.
+
+Common issues like missing nodes or broken links often arise from incomplete exports or incompatible viewer versions, so double-check file integrity and application compatibility accordingly.
+
+<Tip>
+When collaborating, keep a backup of your original canvas files before merging edits from others to safeguard against accidental data loss or corruption.
+</Tip>
+
+## Next Steps
+
+With your canvas shared and integrated, explore additional capabilities such as customizing node styles, applying templates for standardization, or automating updates through connected apps. For further inspiration and practical guidance, consult the [Using Examples and Templates](/guides/advanced-usage-patterns/using-examples-and-templates) guide to enhance your canvas workflow through reuse and collaboration. To connect your shared canvases with specific apps, see the [Apps and Tools](/docs/apps) listing for supported platforms and conversion utilities.
+
+Expanding your canvas's reach through thoughtful sharing and integration unlocks powerful opportunities for visual collaboration and innovation across your projects.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" branch="main" paths={[{"path": "assets/canvas.js", "range": "30-110"}]} />
