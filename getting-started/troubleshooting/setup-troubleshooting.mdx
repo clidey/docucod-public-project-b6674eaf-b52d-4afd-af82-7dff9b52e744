@@ -1,0 +1,66 @@
+---
+title: "Troubleshooting Setup"
+description: "Pinpoints the most common problems that occur during setup or first launch—such as file not found errors, UI not loading, or canvas rendering issues—and provides actionable fixes."
+---
+
+## Troubleshooting Setup Issues in JSON Canvas
+
+Getting your JSON Canvas environment up and running seamlessly is essential to start creating and sharing infinite canvas data effectively. This guide addresses the most common setup problems encountered during installation and first launch, offering practical solutions to resolve them quickly. Whether you’re facing missing files, UI failures, or rendering glitches, understanding these issues will ensure a smooth onboarding experience.
+
+### Resolving Missing or Incorrect File References
+
+A frequent challenge arises when key canvas files such as `.canvas` JSON files or embedded resources like images do not load properly. This often results in blank canvases or error messages.
+
+Start by verifying that all referenced files exist at their specified paths and are accessible by your browser. For example, nodes of type `file` include a `file` attribute pointing to local paths or relative URLs inside the canvas data. If the path is incorrect, the node will fail to display the linked content. Double-check your `.canvas` file for correct filenames and relative paths, particularly for media files like logos or embedded SVGs.
+
+Keep in mind that case sensitivity on certain operating systems can cause file not found errors even if the filename looks correct. Also, ensure that the web server or local file system permissions allow serving these files.
+
+If you notice edges failing to link nodes correctly, confirm that each edge’s `fromNode` and `toNode` IDs exactly match valid node IDs present in the canvas data. Mismatched or missing IDs prevent connection rendering between nodes.
+
+This precision in paths and IDs reflects the JSON Canvas specification outlined in the [JSON Canvas Spec](/spec/1.0).
+
+### Troubleshooting UI Loading and Interaction Issues
+
+After verifying file correctness, problems with UI rendering or canvas interaction are next to check. Failed UI elements or unresponsive behaviors typically relate to JavaScript or CSS not loading or executing properly.
+
+Ensure the core assets `canvas.js` and `style.css` are correctly loaded in your hosting environment. Missing scripts will prevent critical canvas initialization functions such as dragging nodes, zooming, and panning from working, causing a static or blank interface. Use browser developer tools (Console and Network tabs) to detect failed asset loads or runtime errors.
+
+If the canvas appears but nodes or edges do not respond, verify that the JavaScript event handlers are active. The canvas script sets up mouse and touch events for node dragging and pan/zoom controls; malfunction here hints at script loading or compatibility problems. Confirm you use a modern browser supporting ES6+ JavaScript features and the Clipboard API.
+
+### Correcting Canvas Rendering and Scaling Problems
+
+Improper rendering of node positions or edge connections can stem from scaling and pan settings disrupting the view.
+
+JSON Canvas applies dynamic scaling and panning to fit the entire layout in your viewport, balancing zoom between minimum and maximum limits. If your canvas elements are positioned outside the visible area or scaled invisibly small or large, reset the view with the provided UI controls such as the “Reset” zoom button.
+
+Dragging nodes should immediately redraw their connected edges; if edges appear disconnected or misplaced, refreshing the page or triggering a manual redraw by toggling output can restore visuals.
+
+The canvas dynamically calculates anchor points for edges (top, right, bottom, left) based on node bounding boxes. Incorrect node sizes or CSS overrides affecting node width/height can thus cause edge misalignments. Keep your environment’s styling consistent with the product defaults for reliable visual fidelity.
+
+### Handling Common Keyboard and Touch Control Pitfalls
+
+User controls include dragging nodes with mouse or touch, panning by holding the space bar, and zooming via mouse wheel or pinch gestures. Confusion or locked states may result from not releasing the space key or touch gestures incorrectly triggering multiple behaviors.
+
+If panning stops working, ensure the space bar keyup event registered correctly by pressing and releasing space once again. Similarly, drag operations require holding down the mouse button or touch and moving by a minimum threshold before node movement begins.
+
+On touch devices, zoom may conflict with browser gestures; using pinch must be deliberate. If gestures misbehave, try refreshing the page and avoiding browser zoom shortcuts during usage.
+
+### Verifying Your Setup with Output Data
+
+An important part of troubleshooting is using the canvas output panel, which shows your current canvas data in JSON format reflecting live node and edge states.
+
+Toggle the output panel using the dedicated button, then inspect the JSON content. This panel confirms the nodes and edges loaded properly and their positions are updated as you interact. Copy or download this data for backup or external validation.
+
+If the JSON output is empty, malformed, or fails to update after interactions, it signals serious errors in the setup or script execution that you must address by reviewing earlier troubleshooting points.
+
+<Tip>
+Use browser developer tools to check for Javascript errors and missing resource files whenever the canvas UI fails or behaves unexpectedly. Addressing those low-level problems is the fastest way to restore full functionality.
+</Tip>
+
+### Recommended Next Steps
+
+Once your setup issues are resolved, you can confidently move to creating and customizing canvases. Check out the [Creating Your First Canvas](/guides/core-workflows/creating-your-first-canvas) guide for practical workflows. For more on configuring and validating your canvas environment, explore [Basic Configuration & Quick Validation](/getting-started/quick-setup-journey/basic-configuration-quick-validation).
+
+If problems persist, community discussions and issue trackers on the [GitHub Repository](https://github.com/obsidianmd/jsoncanvas) provide valuable support and updates.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" branch="main" paths={[{"path": "assets/canvas.js", "range": "10-230"},{"path": "spec/1.0.md", "range": "10-95"}]} />
