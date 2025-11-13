@@ -1,0 +1,65 @@
+---
+title: "Features At a Glance"
+description: "Review a quick summary of JSON Canvas's essential features, illustrated with concrete examples. This page serves as a rapid orientation for new users, covering what is possible with the application's canvas UI, script support, styling, and extensibility."
+---
+
+## Discover What JSON Canvas Enables
+
+JSON Canvas brings infinite canvas data to life by combining a dynamic visual workspace with a powerful JSON-based format. This page offers a rapid introduction to JSON Canvas’s essential capabilities, demonstrating how the canvas UI, script integration, styling, and extensibility come together to empower you in navigating, organizing, and visualizing complex information spatially. Understanding these key features early unlocks the potential to craft interactive, richly formatted canvases that suit diverse workflows and applications.
+
+## What You Can Achieve with JSON Canvas
+
+At its core, JSON Canvas is designed to give you the freedom to interact with information across an expansive digital surface. Here, nodes representing files, text, links, or groups can be freely positioned, connected, and styled. The canvas UI makes manipulating this space intuitive and responsive, allowing smooth dragging, panning, and zooming that keep you focused on your content rather than the interface. Combined with script support, which lets you dynamically adjust, highlight, or serialize canvas elements, JSON Canvas ensures that your visual arrangements are more than static diagrams—they become interactive, data-driven environments.
+
+Styling capabilities let you customize colors, sizes, and layouts to fit your visual language or branding needs, while extensibility through scripts and configuration opens pathways to tailor behavior precisely. Whether you need to visualize project dependencies, build knowledge maps, or integrate external files seamlessly, JSON Canvas’s features address these tasks with adaptable precision.
+
+### An Example in Action
+Imagine you have several files and notes scattered across the canvas, grouped visually to represent project phases. A script can highlight all related notes dynamically or export the current canvas state into a sharable `.canvas` file. The UI’s pan-and-zoom gestures allow you to effortlessly navigate between high-level overviews and detailed views without losing context.
+
+```json
+{
+  "nodes": [
+    {"id": "node1", "type": "file", "file": "readme.md", "x": 100, "y": 200, "width": 480, "height": 320, "color": "6"},
+    {"id": "node2", "type": "text", "text": "Project overview notes", "x": 650, "y": 180, "width": 300, "height": 150}
+  ],
+  "edges": [
+    {"id": "edge1", "fromNode": "node1", "toNode": "node2", "fromSide": "right", "toSide": "left", "toEnd": "arrow"}
+  ]
+}
+```
+
+This snippet reflects a snapshot of nodes and a connecting edge, illustrating how JSON Canvas structures content spatially and semantically for rendering and interaction.<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "assets/canvas.js", "range": "10-180"}]} />
+
+## Core Features at Your Fingertips
+
+JSON Canvas’s primary strength lies in its combination of visual and programmatic controls. The canvas supports:
+
+- **Infinite Spatial Freedom:** Position nodes anywhere, group them visually, and connect via edges that represent relationships.
+
+- **Dynamic Interaction:** Intuitive drag-and-drop, smooth pan-and-zoom controls, and touch support ensure fluid navigation and immediate feedback while organizing nodes.
+
+- **Rich Script Support:** Scripts enable dynamic manipulation of the canvas, such as highlighting specific node groups or serializing the canvas state to JSON for export.
+
+- **Custom Styling:** Colors, sizes, and background styles can be adjusted per node or group, helping you maintain clarity or brand consistency.
+
+Collectively, these features create a canvas environment that is both visually powerful and deeply programmable, supporting a broad spectrum of visual organization needs.
+
+## See the Features in Practice
+
+Visualizing the power of JSON Canvas becomes tangible when manipulating it directly. Suppose you want to organize a research project’s resources: PDFs, notes, diagrams, and links can be represented as nodes scattered across the canvas. Drag any node to reposition it, connect nodes with edges to show dependencies, or group related nodes with a labeled container.
+
+You can toggle the output panel to view live JSON serialization of your canvas, enabling quick export or sharing. Scripts integrated into the canvas can respond to interactions, for instance by highlighting all nodes within a group when hovered, or by auto-adjusting the viewport to fit all visible content.
+
+The canvas’s pan-and-zoom controls respond to mouse wheel with ctrl key, on-screen buttons, or multi-touch gestures, making it accessible on desktops and touch devices alike. This blend of interactive and data-driven controls means your canvas is not just a passive diagram but a working environment reflecting your unique context.
+
+## Preparing to Explore Further
+
+Getting started with JSON Canvas involves setting up your workspace and exploring fundamental building blocks like node creation, edge drawing, and script usage. This page orients you to what is possible so you can approach hands-on guides and configuration steps with clarity and confidence.
+
+To dive deeper into creating your first canvas, visit [Creating Your First Canvas](/guides/core-workflows/creating-your-first-canvas). For an introduction to core concepts and terminology that underpin these features, see [Core Concepts and Terminology](/overview/concepts-and-workflows/core-concepts). 
+
+Together, these resources will guide you from initial setup toward mastering JSON Canvas's full capabilities. 
+
+<Tip>
+Explore the interactive canvas UI alongside this overview to see each feature come to life. The ability to serialize and export your arrangement as JSON empowers you with ownership and longevity of your data.
+</Tip>
