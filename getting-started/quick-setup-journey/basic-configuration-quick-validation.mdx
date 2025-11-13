@@ -1,0 +1,92 @@
+---
+title: "Basic Configuration & Quick Validation"
+description: "Covers any initial configuration required (e.g., loading a sample canvas), and explains how to verify your install is successful using included examples. Guides users to a 'success' moment as quickly and confidently as possible."
+---
+
+## Getting Started with Basic Configuration and Validation
+
+After installing JSON Canvas and launching its interface, the next step is to set up the initial environment so you can explore its capabilities immediately. This page guides you through loading a sample canvas and verifying that everything is configured correctly. By the end, you will have a working canvas loaded, able to interact with nodes and edges, and confident that the system is functioning as expected.
+
+### Preparing Your Canvas Environment
+
+JSON Canvas operates by rendering a spatial graph of nodes and their connections on an infinite canvas. The initial configuration involves loading a sample canvas JSON file that contains predefined nodes such as files, text blocks, and groups, arranged visually with edges connecting them.
+
+First, ensure your installation includes the essential files: `canvas.html`, `canvas.js`, `prism.js`, and the accompanying `style.css`. These provide the UI layout, interactive functions, syntax highlighting, and styling necessary for the canvas to render correctly. Without these in place, the interface will not display or behave as designed.<Source url="https://github.com/obsidianmd/jsoncanvas" branch="main" paths={[{"path": "canvas.html", "range": "1-82"},{"path": "assets/canvas.js", "range": "1-260"},{"path": "assets/style.css", "range": "1-312"}]} />
+
+### Loading a Sample Canvas
+
+A sample canvas, represented as a `.canvas` JSON file, provides a quick way to see JSON Canvas's features in action. This file specifies nodes (such as files and text) and edges between them, with positions and dimensions mapped visually on the canvas.
+
+To load the sample:
+
+<Steps>
+  <Step title="Open the sample canvas file">
+    Locate the `sample.canvas` file included with your distribution or repository clone. Open it in an editor or confirm its path for loading.
+  </Step>
+  <Step title="Open the Canvas in Your Browser">
+    Launch `canvas.html` in a modern web browser (Chrome, Firefox, Edge, or Safari). It will render the predefined nodes and edges.
+  </Step>
+  <Step title="Verify nodes and layout">
+    Check that you see named blocks such as “readme.md”, “spec/1.0.md”, and “logo.svg” arranged spatially on the canvas area. Edges connect nodes, showing directional links.
+  </Step>
+  <Step title="Use built-in zoom and pan controls">
+    Use mouse scroll with Ctrl (or Cmd on Mac) to zoom in and out, or click the Zoom In/Out/Reset buttons at the bottom right. Hold Spacebar and drag to pan the canvas.
+  </Step>
+  <Step title="Toggle the output panel">
+    Click the 'Toggle output' button to view the JSON data representing the current canvas state. Confirm that this JSON updates if you drag nodes.
+  </Step>
+</Steps>
+
+### Verifying Successful Setup
+
+A successful configuration is indicated by the smooth rendering of nodes and edges, responsive interaction with pan and zoom, and accurate output of canvas JSON data.
+
+To verify:
+
+- Nodes should visually respond to dragging with the mouse or touch input.
+- Edges dynamically redraw to maintain connections as you move nodes.
+- The output JSON panel updates in real time to reflect node positions and edge data.
+
+Run this quick check in your browser's console to confirm key functions are defined:
+
+```javascript
+typeof adjustCanvasToViewport === 'function'
+typeof drawEdges === 'function'
+```
+
+Both should return `'function'`, demonstrating core scripts loaded properly.
+
+<Tip>
+If nodes do not appear, or edges are missing, ensure scripts and stylesheets are correctly referenced in `canvas.html`. Network errors or missing files can cause incomplete rendering.
+</Tip>
+
+### Minimal Configuration Example
+
+The core configuration is handled automatically by loading `canvas.html` along with the JavaScript assets. If you want to load your own canvas data programmatically, here is a minimal example of initializing a canvas with the sample data:
+
+```javascript
+fetch('sample.canvas')
+  .then(response => response.json())
+  .then(data => {
+    // Assume setCanvasData is a function that applies canvas JSON
+    setCanvasData(data);
+    adjustCanvasToViewport();
+    drawEdges();
+  });
+```
+
+This ensures nodes and edges are placed and visible within the viewport after loading.
+
+### Understanding the Canvas Output
+
+The output panel provides a live JSON representation of the current canvas state, including node positions, sizes, and edge connections. This is crucial for saving your work or exporting canvas layouts.
+
+Use the Copy or Download buttons to extract this data for use in other apps or future reloading.
+
+### Next Steps
+
+With the basic configuration in place, you can advance to creating your own canvases or customizing layouts. Explore how to define nodes and edges manually or via scripts in the [Creating Your First Canvas](/guides/core-workflows/creating-your-first-canvas) and [Customizing and Formatting Canvases](/guides/core-workflows/customizing-and-formatting-canvases) guides.
+
+For troubleshooting setup problems, see [Setup Troubleshooting](/getting-started/troubleshooting/setup-troubleshooting).
+
+For a broader perspective on tools that support JSON Canvas, refer to the [Apps and Tools](/docs/apps.md) page.

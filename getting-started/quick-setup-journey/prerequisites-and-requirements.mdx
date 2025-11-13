@@ -1,0 +1,67 @@
+---
+title: "Prerequisites & System Requirements"
+description: "Identify what you need to have in place before installing JSON Canvas—including supported operating systems, browsers, and any dependencies. Ensures you have the right foundation before proceeding."
+---
+
+# Prerequisites & System Requirements
+
+Before installing or working with JSON Canvas, ensuring your environment meets the necessary requirements is vital to guarantee smooth operation and compatibility. This page outlines the supported platforms, browser capabilities, and foundational dependencies required to work effectively with the JSON Canvas format and its interactive tools.
+
+## Supported Operating Systems and Browsers
+
+JSON Canvas is designed to be platform-agnostic at its core since it is a JSON-based file format. However, to interact with the official web-based viewer and tools that implement JSON Canvas, you need a modern web browser that supports the latest web standards:
+
+- **Operating Systems:** Any OS with access to a modern browser, including Windows, macOS, Linux distributions, and mobile OSes such as iOS and Android.
+- **Browsers:** The latest versions of Chrome, Firefox, Safari, Edge, and Chromium-based browsers fully support the interactive canvases and controls.
+
+Since JSON Canvas primarily operates within these browsers rather than requiring standalone installation, an up-to-date browser environment ensures optimal performance and feature availability.
+
+## Browser Feature Dependencies
+
+The interactive rendering and manipulation capabilities of JSON Canvas rely on core web technologies:
+
+- **SVG Support:** To draw edges and connectors between canvas nodes.
+- **JavaScript ES6+:** For dynamic interaction, panning, zooming, node manipulation, and data serialization.
+- **CSS Variables and Custom Properties:** Used for scalable theming, zoom scaling, and panning offsets.
+- **Clipboard API:** Enables copying canvas data as JSON.
+- **Blob and URL APIs:** Allow exporting the canvas data file seamlessly.
+
+These features are supported on all modern browsers mentioned above and ensure that you can fully interact with and export your canvas work.
+
+## Network and Access Requirements
+
+Using JSON Canvas tools on the official website or other online implementations requires internet access to load assets like scripts, stylesheets, and fonts. If you plan to use JSON Canvas offline or embedded within another app:
+
+- Ensure all required assets are locally hosted and accessible.
+- Confirm your app environment supports JavaScript and SVG rendering.
+
+## Minimal Hardware and Performance Notes
+
+Because JSON Canvas renders an infinite canvas with interactions such as drag-and-drop, zooming, and real-time redraw of SVG paths, reasonable hardware is recommended:
+
+- Devices with modern processors and at least 2GB RAM will provide smooth canvas interaction.
+- Touchscreen or pointer input devices enhance usability but are not mandatory.
+
+## Preparing to Use JSON Canvas
+
+There are no additional software dependencies or installations required to start using JSON Canvas files; a compatible browser suffices. However, third-party apps and tools listed in related documentation may have their own prerequisites.
+
+If you plan on editing or integrating JSON Canvas programmatically, ensure your development environment can handle JSON processing and required libraries indicated in the tooling documentation.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" branch="main" paths={[{"path": "assets/canvas.js", "range": "1-160"}]} />
+
+## Tips for a Smooth Start
+
+- Always update your browser to the latest stable version before working with JSON Canvas.
+- Use devices with larger screens for the best canvas navigation experience.
+- For saving and sharing, familiarize yourself with how your tools export `.canvas` files.
+
+<Warning>
+Avoid using highly outdated browsers or operating systems as they lack support for necessary web standards, leading to incomplete or broken canvas functionality.
+</Warning>
+
+## Next Steps
+
+Once your environment is ready, proceed to the [Installation & First Launch](/getting-started/quick-setup-journey/installation-and-first-launch) guide to get the initial setup and run your first JSON Canvas operation.
+
+For detailed information about compatible apps and tools that work with JSON Canvas, see [Apps and tools](/docs/apps.md).

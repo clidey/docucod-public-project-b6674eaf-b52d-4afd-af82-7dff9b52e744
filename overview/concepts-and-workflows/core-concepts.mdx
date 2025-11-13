@@ -1,0 +1,62 @@
+---
+title: "Core Concepts and Terminology"
+description: "Explore the central ideas and vocabulary unique to JSON Canvas. This page defines terms such as canvas view, layout templates, asset inclusion, and configuration, enabling users to navigate and communicate about the system with clarity."
+---
+
+## Understanding JSON Canvas: Core Concepts and Terminology
+
+Navigating an infinite canvas filled with interconnected nodes and edges requires a shared language and grasp of fundamental ideas. This page equips you with definitions and context around key concepts like the canvas view, layout templates, asset inclusion, and configuration. Being fluent in this vocabulary will empower you to structure canvases more effectively, tailor workflows, and communicate precisely when collaborating or troubleshooting.
+
+## What JSON Canvas Is and Who Uses It
+
+At its heart, JSON Canvas is a versatile data format representing an infinite spatial workspace composed of nodes (representing text, files, links, or groups) and edges connecting them. Each node occupies a coordinate on an ever-expandable grid, enabling limitless layout possibilities. This structured yet open format lets creators organize ideas visually, anchor context with files or URLs, and layer information intuitively.
+
+This terminology overview is crafted for users ranging from novices exploring infinite canvas tools to developers implementing JSON Canvas in apps or integrations. Whether you create personal digital whiteboards, knowledge graphs, or complex diagrams, mastering these terms clarifies the capabilities and informs how best to leverage the format.
+
+## Foundational Terminology in Practice
+
+A **canvas view** refers to the current visible area where nodes and edges are arranged and manipulated. Think of it as your window onto the infinite workspace—pan and zoom here to explore different regions of your data.
+
+**Layout templates** provide predefined arrangements or styles for nodes and groups, serving as starting points or organizational standards across multiple canvases. Using templates ensures consistency, whether for project planning, mind mapping, or UI prototyping.
+
+**Asset inclusion** covers how external resources like images, videos, or documents are attached as file-type nodes within the canvas. Specifying file paths or subpaths enables direct referencing of relevant content inside the canvas ecosystem, preserving context and enriching your visual narrative.
+
+**Configuration** here relates to setup details that govern canvas behavior or appearance, such as color schemes, node sizing, or serialization options in your environment. Understanding config options helps you customize canvases to meet diverse needs.
+
+These ideas interlock to form the backbone of JSON Canvas usage, bridging the gap between abstract format and tangible user experience.
+
+## How JSON Canvas Components Interact
+
+Within a canvas, nodes act as the primary building blocks, each uniquely identified and placed by coordinates (`x` and `y`). They come in various types: `text` nodes hold Markdown content; `file` nodes link to system attachments; `link` nodes connect to URLs; and `group` nodes visually cluster other nodes for organization.
+
+Edges draw relationships between nodes, denoted by start and end points anchored to specific sides (top, right, bottom, left) of nodes. They may carry directional arrows and optional labels, illuminating the nature of connections.
+
+This interplay defines workflows: you might start by adding text boxes (text nodes), embed referenced documents (file nodes), cluster related ideas within groups, and connect them all with edges that map dependencies or flows.
+
+For example, a user planning a project may place task descriptions as text nodes, attach relevant specification documents as file nodes, group tasks by phases, and link them to show schedules or prerequisites.
+
+Understanding these relationships deepens your ability to design, interpret, and manipulate canvases strategically.
+
+<Source url="https://github.com/obsidianmd/jsoncanvas" paths={[{"path": "spec/1.0.md", "range": "1-130"}]} />
+
+## Configuring and Extending Your Canvas
+
+Proper configuration enhances functionality and user experience. Colors can be set via presets or hex values, distinguishing node categories and edge types visually. Attributes like width and height enable precise control over node sizing, tailoring readability and emphasis.
+
+Inclusion of assets through file nodes requires specifying correct file paths, and optionally subpaths, to pinpoint content within larger documents or collections. Groups help compartmentalize complex information, often labeled and sometimes decorated with background images styled to cover, maintain ratio, or repeat for aesthetic or organizational effect.
+
+Using these core concepts, users and developers can create rich canvases anchored in clarity and customization, fostering extensibility across diverse applications.
+
+## Next Steps: Applying This Knowledge
+
+Having mastered the terminology and core concepts, you are prepared to dive into practical guides on creating and customizing canvases. Explore how to build your first canvas or employ layout templates effectively. To configure behavior and integrate assets smoothly, refer next to the Getting Started guides and feature highlights.
+
+For a structured overview of the formal specification, the [JSON Canvas Spec](https://jsoncanvas.org/spec/1.0) details every attribute, node type, and edge property with precision.
+
+Deepen your understanding to unlock the full potential of JSON Canvas and its ecosystem.
+
+[Getting Started > Installation & First Launch](/getting-started/quick-setup-journey/installation-and-first-launch)
+
+[JSON Canvas Spec (1.0)](/spec/1.0)
+
+[Features At a Glance](/overview/concepts-and-workflows/feature-highlights)
